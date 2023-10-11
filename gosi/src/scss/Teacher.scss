@@ -14,6 +14,9 @@
   content: "";
   clear: both;
 }
+.ov {
+  overflow: hidden;
+}
 /*teacher_top*/
 .teacher_top {
   position: relative;
@@ -128,7 +131,6 @@
     margin-top: 25px;
     position: relative;
     .title_section {
-      overflow: hidden;
       margin-bottom: 10px;
     }
     .path {
@@ -214,79 +216,229 @@
     /*과목별 배너 영역*/
     .subject_tab_area {
       width: 100%;
-      .rolling_banner1 {
-        position: relative;
-        width: 566px;
-        height: 160px;
-        overflow: hidden;
-      }
-      .rolling_banner2 {
-        position: relative;
-        width: 295px;
-        height: 160px;
-        overflow: hidden;
-        background: #e8f2fb;
-        .banner_slider2 {
-          background: transparent;
-          .sd_box {
-            height: 160px;
-            .tc_name {
-              margin: 35px 0 0 20px;
-              width: 60px;
-              height: 60px;
-              background: #1ba6fd;
-              color: #fff;
-              line-height: 60px;
-              text-align: center;
-              border-radius: 50%;
-              font-size: 16px;
-              font-weight: 600;
+      .subject_1 {
+        .rolling_banner1 {
+          position: relative;
+          width: 566px;
+          height: 160px;
+          overflow: hidden;
+        }
+        .rolling_banner2 {
+          position: relative;
+          width: 295px;
+          height: 160px;
+          overflow: hidden;
+          background: #e8f2fb;
+          .banner_slider2 {
+            background: transparent;
+            .sd_box {
+              height: 160px;
+              .tc_name {
+                margin: 35px 0 0 20px;
+                width: 60px;
+                height: 60px;
+                background: #1ba6fd;
+                color: #fff;
+                line-height: 60px;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 16px;
+                font-weight: 600;
+              }
+              .sd_box_txt {
+                margin: 38px 37px 0 0;
+                width: 152px;
+                height: 60px;
+                overflow: hidden;
+                color: #222;
+                font-size: 15px;
+                letter-spacing: -1px;
+                line-height: 20px;
+              }
             }
-            .sd_box_txt {
-              margin: 38px 37px 0 0;
-              width: 152px;
-              height: 60px;
-              overflow: hidden;
-              color: #222;
-              font-size: 15px;
-              letter-spacing: -1px;
-              line-height: 20px;
+            .bar_menu {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 40px;
+              background: #dcebf7;
+              text-align: center;
+              ul {
+                width: 100%;
+                li {
+                  float: left;
+                  width: 33.333%;
+                  line-height: 40px;
+                  span {
+                    display: inline-block;
+                    font-size: 13px;
+                    color: #5c7482;
+                    cursor: pointer;
+                  }
+                  span:hover {
+                    color: #0069a6;
+                    font-weight: 600;
+                  }
+                }
+                li:after {
+                  content: "|";
+                  float: right;
+                  display: inline-block;
+                  color: #5c7482;
+                  font-weight: 400;
+                  cursor: unset;
+                }
+                li:nth-child(3):after {
+                  content: "";
+                }
+              }
             }
           }
-          .bar_menu {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 40px;
-            background: #dcebf7;
-            text-align: center;
-            ul {
-              width: 100%;
-              li {
-                float: left;
-                width: 33.333%;
-                line-height: 40px;
-                span {
-                  display: inline-block;
-                  font-size: 13px;
-                  color: #5c7482;
-                  cursor: pointer;
-                }
-                span:hover {
-                  color: #0069a6;
-                  font-weight: 600;
-                }
+        }
+      }
+      /*선생님 공지사항*/
+      .teacher_notice {
+        margin: 30px 0 40px;
+        padding: 10px 0;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        .tit {
+          margin-left: 23px;
+          font-size: 14px;
+          color: #555;
+          letter-spacing: -1px;
+          img {
+            margin: 5px 5px 0 0;
+          }
+        }
+        .tit:after {
+          content: "|";
+          margin: 0 20px;
+        }
+        .tc_notice_slider {
+          height: 23px;
+          ul {
+            li {
+              display: inline-block;
+              width: 640px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              word-wrap: normal;
+              overflow: hidden;
+              font-size: 14px;
+              color: #555;
+              strong {
+                margin-right: 5px;
               }
-              li:after {
-                content: "|";
-                float: right;
+              .new_icon {
                 display: inline-block;
-                color: #5c7482;
-                font-weight: 400;
-                cursor: unset;
+                margin-left: 5px;
               }
-              li:nth-child(3):after {
-                content: "";
+            }
+          }
+        }
+      }
+      /*teacher_face*/
+      .teacher_face_area {
+        .teacher_face {
+          margin-left: 14px;
+          width: 100%;
+          ul {
+            margin-left: -20px;
+            .teacher_box {
+              float: left;
+              position: relative;
+              display: block;
+              width: 430px;
+              height: 270px;
+              margin: 6px 0 0 6px;
+              background: linear-gradient(
+                to bottom,
+                rgba(244, 246, 247, 1) 0%,
+                rgba(226, 231, 234, 1) 100%
+              );
+              border: 1px solid #fff;
+              a {
+                display: inline-block;
+                width: 100%;
+                padding: 40px;
+                box-sizing: border-box;
+                .teacher_info_text {
+                  position: relative;
+                  z-index: 1;
+                  span {
+                    display: block;
+                  }
+                  .teacher_name_code {
+                    margin-bottom: 15px;
+                    color: #000;
+                    font-size: 26px;
+                    font-weight: 600;
+                  }
+                  .teacher_slogan {
+                    width: 260px;
+                    height: 60px;
+                    overflow: hidden;
+                    color: #666;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 300;
+                  }
+                }
+                .teacher_face_img {
+                  position: absolute;
+                  right: 0;
+                  bottom: 40px;
+                  img {
+                    width: 255px;
+                  }
+                }
+                .teacher_info {
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 87px;
+                  padding: 15px 0 13px;
+                  box-sizing: border-box;
+                  background: #f4f6f7;
+                  .tch_info_btns {
+                    margin-left: 0;
+                    li {
+                      float: left;
+                      width: 25%;
+                      text-align: center;
+                      position: relative;
+                      a {
+                        margin: 0 auto;
+                        font-size: 14px;
+                        color: #5c7482;
+                        display: block;
+                        width: 90px;
+                        height: 30px;
+                        line-height: 30px;
+                        background: #fff;
+                        border-radius: 3px;
+                        letter-spacing: -1px;
+                        padding: 0;
+                      }
+                      a:hover {
+                        color: #0069a6;
+                        font-weight: 600;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .teacher_box:hover {
+              background: #fff;
+              border: 1px solid #0069a6;
+              .teacher_face_img {
+                img {
+                  width: 290px;
+                  transition-duration: 0.5s;
+                }
               }
             }
           }

@@ -1,7 +1,16 @@
-import React from "react";
+import { useState } from "react";
 import "scss/Teacher.scss";
+import { Link } from "react-router-dom";
 
-export default function Index() {
+export default function TeacherLnb() {
+  const [lnbCount, SetLnbCount] = useState("on");
+  function lnb_togle(params) {
+    if (lnbCount === "on") {
+      SetLnbCount("off");
+    } else {
+      SetLnbCount("on");
+    }
+  }
   return (
     <>
       <div className="teacher_top">
@@ -36,28 +45,52 @@ export default function Index() {
           <div className="left_title">공무원 선생님</div>
           <div className="subject_category">9급 공통과목</div>
           <ul className="teacher_list">
-            <li className="sub_tit">
+            <li className="sub_tit" onClick={lnb_togle}>
               <p id="subject_1" className="on">
                 국어
               </p>
               <ul className="teacher_name">
                 <li className="on">
-                  <a href="javascript:void(0)">신민숙</a>
+                  <Link
+                    to={"https://gosi.hackers.com/html/professor/?user_num=73"}
+                  >
+                    신민숙
+                  </Link>
                 </li>
                 <li className="on">
-                  <a href="javascript:void(0)">양효주</a>
+                  <Link
+                    to={"https://gosi.hackers.com/html/professor/?user_num=112"}
+                  >
+                    양효주
+                  </Link>
                 </li>
                 <li className="on">
-                  <a href="javascript:void(0)">황진선</a>
+                  <Link
+                    to={"https://gosi.hackers.com/html/professor/?user_num=485"}
+                  >
+                    황진선
+                  </Link>
                 </li>
                 <li className="on">
-                  <a href="javascript:void(0)">최정</a>
+                  <Link
+                    to={"https://gosi.hackers.com/html/professor/?user_num=340"}
+                  >
+                    최정
+                  </Link>
                 </li>
                 <li className="on">
-                  <a href="javascript:void(0)">유정민</a>
+                  <Link
+                    to={"https://gosi.hackers.com/html/professor/?user_num=65"}
+                  >
+                    유정민
+                  </Link>
                 </li>
                 <li className="on">
-                  <a href="javascript:void(0)">고혜원</a>
+                  <Link
+                    to={"https://gosi.hackers.com/html/professor/?user_num=540"}
+                  >
+                    고혜원
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -65,7 +98,7 @@ export default function Index() {
         </div>
         {/* teacher_contents */}
         <div className="teacher_contents">
-          <div className="title_section">
+          <div className="title_section ov">
             <span className="path fr">
               Home &gt;<em>공무원 선생님</em>
             </span>
@@ -187,6 +220,162 @@ export default function Index() {
               </div>
               {/* //tab_area-대표강의 영역 */}
             </div>
+            {/* teacher_notice */}
+            <div className="teacher_notice">
+              <p className="tit fl">
+                <img
+                  src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/notice_icon2.png"
+                  alt="공지사항 아이콘"
+                />
+                선생님 공지
+              </p>
+              <div className="tc_notice_slider p_tc_notice_slider">
+                <ul className="bxslider">
+                  <li>
+                    <Link
+                      to={
+                        "https://gosi.hackers.com/html/professor/?user_num=540#/notice_view/1205"
+                      }
+                    >
+                      <strong>&#91;고혜원&#93;</strong> 2024 대비 혜원국어 강의
+                      커리큘럼 안내
+                      <img
+                        src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/new_icon.png"
+                        class="new_icon"
+                        alt="new 아이콘"
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {/* //teacher_notice */}
+            {/* teacher_face */}
+            <div className="teacher_face_area">
+              <div className="teacher_face">
+                <ul>
+                  <li className="teacher_box">
+                    <Link
+                      to={
+                        "https://gosi.hackers.com/html/professor/?user_num=73#/"
+                      }
+                    >
+                      <p className="teacher_info_text">
+                        <span className="teacher_name_code">신민숙 선생님</span>
+                        <span className="teacher_slogan">
+                          쌩기초 입문생도
+                          <br />
+                          국어가 쉽게 느껴지는
+                          <br />
+                          쉬운국어, 신민숙
+                        </span>
+                      </p>
+                      <span className="teacher_face_img">
+                        <img src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/user_num73_img_200615103916.png" />
+                      </span>
+                      <div className="teacher_info">
+                        <ul className="tch_info_btns ov">
+                          <li>
+                            <a
+                              href="javascript:void(0);"
+                              onclick="tc_movie('https://cdndown.hackers.com/pass/no/mp4/promotion/230621/2024_sms_youtube.mp4', 750, 450)"
+                            >
+                              OT
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0);"
+                              onclick="tc_movie('https://youtu.be/O4druyNe6Io', 750, 450)"
+                            >
+                              대표 강의
+                            </a>
+                          </li>
+                          <li>
+                            <Link
+                              to={
+                                "https://gosi.hackers.com/html/professor/?user_num=73#/notice"
+                              }
+                            >
+                              공지사항
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to={
+                                "https://gosi.hackers.com/html/professor/?user_num=73#/freelecture"
+                              }
+                            >
+                              무료강의
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </Link>
+                  </li>
+                  <li className="teacher_box">
+                    <Link
+                      to={
+                        "https://gosi.hackers.com/html/professor/?user_num=73#/"
+                      }
+                    >
+                      <p className="teacher_info_text">
+                        <span className="teacher_name_code">신민숙 선생님</span>
+                        <span className="teacher_slogan">
+                          쌩기초 입문생도
+                          <br />
+                          국어가 쉽게 느껴지는
+                          <br />
+                          쉬운국어, 신민숙
+                        </span>
+                      </p>
+                      <span className="teacher_face_img">
+                        <img src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/user_num73_img_200615103916.png" />
+                      </span>
+                      <div className="teacher_info">
+                        <ul className="tch_info_btns ov">
+                          <li>
+                            <a
+                              href="javascript:void(0);"
+                              onclick="tc_movie('https://cdndown.hackers.com/pass/no/mp4/promotion/230621/2024_sms_youtube.mp4', 750, 450)"
+                            >
+                              OT
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:void(0);"
+                              onclick="tc_movie('https://youtu.be/O4druyNe6Io', 750, 450)"
+                            >
+                              대표 강의
+                            </a>
+                          </li>
+                          <li>
+                            <Link
+                              to={
+                                "https://gosi.hackers.com/html/professor/?user_num=73#/notice"
+                              }
+                            >
+                              공지사항
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to={
+                                "https://gosi.hackers.com/html/professor/?user_num=73#/freelecture"
+                              }
+                            >
+                              무료강의
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {/* //teacher_face */}
           </div>
         </div>
       </div>
