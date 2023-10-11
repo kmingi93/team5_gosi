@@ -1,0 +1,297 @@
+.teacher_inner {
+  width: 1050px;
+  margin: 0 auto;
+  position: relative;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.cf::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+/*teacher_top*/
+.teacher_top {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: url("https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/movie_bnr_ex.jpg")
+    center top repeat-x;
+  .teacher_top_txt {
+    padding-top: 60px;
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: -3px;
+    font-weight: 600;
+    line-height: 45px;
+    .teacher_top_sub_txt {
+      display: block;
+      margin-top: 17px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: -1px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+  .teacher_notice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 290px;
+    height: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.3);
+    .notice_tit {
+      margin-bottom: 25px;
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+}
+
+.teacher_gate {
+  /*teacher_list*/
+  .left_wrap {
+    float: left;
+    width: 158px;
+    margin: 25px 20px 0 0;
+    .left_title {
+      width: 100%;
+      font-size: 24px;
+      color: #000;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .subject_category {
+      padding: 19px 0 15px 10px;
+      background: #fafafa;
+      border-top: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      font-size: 17px;
+      color: #888;
+      letter-spacing: -1px;
+    }
+    .teacher_list {
+      .sub_tit {
+        p {
+          box-sizing: border-box;
+          width: 100%;
+          text-align: left;
+          position: relative;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 12px 0 10px;
+          border-top: 1px solid #d9d9d9;
+          font-size: 15px;
+          letter-spacing: -1px;
+          color: #0169a6;
+          cursor: pointer;
+          font-weight: 600;
+        }
+        .teacher_name {
+          padding: 10px 0;
+          border-top: 1px solid #d9d9d9;
+          li {
+            text-indent: 20px;
+            line-height: 25px;
+            a {
+              font-size: 14px;
+              color: #555;
+            }
+            a:before {
+              content: "·";
+              padding-right: 2px;
+            }
+            a.on {
+              color: #0169a6;
+            }
+            a:hover {
+              color: #0169a6;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*teacher_contents*/
+  .teacher_contents {
+    float: left;
+    width: 865px;
+    margin-top: 25px;
+    position: relative;
+    .title_section {
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .path {
+      margin: 10px 0 0 0;
+      text-align: right;
+      font-size: 14px;
+      color: #808080;
+      vertical-align: middle;
+      em {
+        color: #0169a6;
+      }
+    }
+    .teacher_tab_area {
+      width: 100%;
+      .tab {
+        height: 70px;
+        margin: 24px auto 15px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        li {
+          width: 100%;
+          height: 70px;
+          border-right: 1px solid #f4f4f4;
+          border-top: 1px solid #d9d9d9;
+          border-bottom: 1px solid #d9d9d9;
+          box-sizing: border-box;
+          background: #fff;
+          text-align: center;
+          button {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            color: #777;
+          }
+        }
+        li.on {
+          background: #0069a6;
+          button {
+            color: #fff;
+          }
+        }
+      }
+      .tabcon {
+        display: none;
+        .sub_tab {
+          overflow: hidden;
+          margin: 20px auto 30px;
+          li {
+            float: none;
+            display: inline-block;
+            a {
+              position: relative;
+              display: inline-block;
+              margin: 0 20px 10px 0;
+              height: 22px;
+              line-height: 20px;
+              padding: 0 10px;
+              cursor: pointer;
+              font-size: 16px;
+              color: #999;
+              text-align: center;
+              letter-spacing: -1px;
+            }
+          }
+          li.on {
+            a {
+              color: #0069a6;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .tabcon.on {
+        display: block;
+      }
+    }
+    /*과목별 배너 영역*/
+    .subject_tab_area {
+      width: 100%;
+      .rolling_banner1 {
+        position: relative;
+        width: 566px;
+        height: 160px;
+        overflow: hidden;
+      }
+      .rolling_banner2 {
+        position: relative;
+        width: 295px;
+        height: 160px;
+        overflow: hidden;
+        background: #e8f2fb;
+        .banner_slider2 {
+          background: transparent;
+          .sd_box {
+            height: 160px;
+            .tc_name {
+              margin: 35px 0 0 20px;
+              width: 60px;
+              height: 60px;
+              background: #1ba6fd;
+              color: #fff;
+              line-height: 60px;
+              text-align: center;
+              border-radius: 50%;
+              font-size: 16px;
+              font-weight: 600;
+            }
+            .sd_box_txt {
+              margin: 38px 37px 0 0;
+              width: 152px;
+              height: 60px;
+              overflow: hidden;
+              color: #222;
+              font-size: 15px;
+              letter-spacing: -1px;
+              line-height: 20px;
+            }
+          }
+          .bar_menu {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background: #dcebf7;
+            text-align: center;
+            ul {
+              width: 100%;
+              li {
+                float: left;
+                width: 33.333%;
+                line-height: 40px;
+                span {
+                  display: inline-block;
+                  font-size: 13px;
+                  color: #5c7482;
+                  cursor: pointer;
+                }
+                span:hover {
+                  color: #0069a6;
+                  font-weight: 600;
+                }
+              }
+              li:after {
+                content: "|";
+                float: right;
+                display: inline-block;
+                color: #5c7482;
+                font-weight: 400;
+                cursor: unset;
+              }
+              li:nth-child(3):after {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

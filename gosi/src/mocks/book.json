@@ -1,0 +1,104 @@
+[
+  {
+    "bookId": 1,
+    "bookCategory": "recomend",
+    "bookImage": "https://cdn.hackers.com/egosi/zfiles/book_img/2471_img_20230822113948.jpg",
+    "bookTitle": "해커스공무원 기출 보카 4800 (세트)",
+    "bookInfo": "해커스 공무원연구소 저 | 해커스패스",
+    "bookDetail": "기출 빅데이터 분석으로 합격에 필요한 공무원 기출 어휘 100% 반영! 스프링 분철 교재와 미니 암기장으로 언제 어디서나 편리하게 암기!",
+    "bookPrice": "21900",
+    "bookDiscount": "10"
+  },
+  {
+    "bookId": 2,
+    "bookCategory": "recomend",
+    "bookImage": "https://cdn.hackers.com/egosi/zfiles/book_img/2515_img_20220714135025.jpg",
+    "bookTitle": "해커스공무원 국어 기본서 (세트)",
+    "bookInfo": "해커스 공무원연구소 저 | 해커스패스",
+    "bookDetail": "공무원 국어 필수개념 및 작품 총정리! <해커스공무원 국어 기본서>",
+    "bookPrice": "49800",
+    "bookDiscount": "10"
+  },
+  {
+    "bookId": 3,
+    "bookCategory": "recomend",
+    "bookImage": "https://cdn.hackers.com/egosi/zfiles/book_img/2500_img_20230822113833.jpg",
+    "bookTitle": "해커스공무원 영어 기본서 (세트)",
+    "bookInfo": "해커스 공무원연구소 저 | 해커스패스",
+    "bookDetail": "상세한 해설로 공무원 영어 완전 정복! <해커스공무원 영어 기본서>",
+    "bookPrice": "46900",
+    "bookDiscount": "10"
+  },
+  {
+    "bookId": 4,
+    "bookCategory": "recomend",
+    "bookImage": "https://cdn.hackers.com/egosi/zfiles/book_img/2453_img_20220818171119.png",
+    "bookTitle": "해커스공무원 한국사 기본서 (세트) (10판)",
+    "bookInfo": "해커스 공무원연구소 저 | 해커스패스",
+    "bookDetail": "공무원 한국사 필수개념 및 사료 총정리! <해커스공무원 한국사 기본서>",
+    "bookPrice": "43900",
+    "bookDiscount": "10"
+  },
+  {
+    "bookId": 5,
+    "bookCategory": "best",
+    "bookImage": "https://cdn.hackers.com/egosi/zfiles/book_img/3946_img_20230921143547.jpg",
+    "bookTitle": "2023 피티윤 국가직 7급 실습팩 (주교재+부교재)",
+    "lank": 1
+  },
+  {
+    "bookId": 6,
+    "bookCategory": "best",
+    "bookTitle": "해커스공무원 김대현 행정법 이론·OX·기출 3단계 워크북",
+    "lank": 2
+  },
+  {
+    "bookId": 7,
+    "bookCategory": "best",
+    "bookTitle": "2024 해커스공무원 현 행정학 강의노트",
+    "lank": 3
+  },
+  {
+    "bookId": 8,
+    "bookCategory": "best",
+    "bookTitle": "해커스공무원 서현 행정학 심화집중 700제",
+    "lank": 4
+  },
+  {
+    "bookId": 9,
+    "bookCategory": "best",
+    "bookTitle": "해커스공무원 김대현 3분의 1로 줄여 쓴 행정법총론",
+    "lank": 5
+  },
+  {
+    "bookId": 10,
+    "bookCategory": "best",
+    "bookImage": "https://cdn.hackers.com/egosi/zfiles/book_img/3947_img_20230921145828.jpg",
+    "bookTitle": "2023 피티윤 국가직 7급 면접(주교재)",
+    "lank": 6
+  },
+  {
+    "bookId": 11,
+    "bookCategory": "best",
+    "bookTitle": "2024 해커스공무원 神행정법총론 조문해설집 (3판)",
+    "lank": 7
+  },
+  {
+    "bookId": 12,
+    "bookCategory": "best",
+    "bookTitle": "해커스공무원 강서연 교육학 올인원 기출완전분석",
+    "lank": 8
+  },
+  {
+    "bookId": 13,
+    "bookCategory": "best",
+    "bookTitle": "2023 피티윤 지역인재 9급",
+    "lank": 9
+  },
+  {
+    "bookId": 14,
+    "bookCategory": "best",
+    "bookTitle": "해커스공무원 9월 영어 하프모의고사",
+    "lank": 10
+  }
+]

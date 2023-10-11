@@ -1,0 +1,86 @@
+.enrolment_wrap {
+  position: relative;
+  width: 1050px;
+  margin: 30px auto 20px;
+  background: #fff;
+  letter-spacing: -1px;
+  text-align: left;
+}
+
+.lnb_wrap {
+  width: 153px;
+
+  .lnb_title {
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #000;
+  }
+
+  .lec_menu dt {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background: #eff8fd;
+    border-top: 1px solid #d9d9d9;
+    font-size: 16px;
+    color: #0169a6;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-right: 10px;
+      font-size: 12px;
+    }
+  }
+  .lec_menu dd.on {
+    max-height: 2000px;
+  }
+  .lec_menu dd.off {
+    max-height: 0;
+  }
+
+  .lec_menu dd {
+    transition: 0.3s;
+    overflow: hidden;
+    p {
+      height: auto;
+      line-height: 40px;
+      border-top: 1px solid #d9d9d9;
+      font-size: 15px;
+      color: #333333;
+      text-indent: 10px;
+      font-weight: bold;
+    }
+
+    .lec_list {
+      border-top: 1px dotted #d9d9d9;
+      li {
+        font-size: 14px;
+        line-height: 40px;
+        text-indent: 20px;
+        color: #333;
+      }
+
+      li:before {
+        content: "-";
+        padding-right: 2px;
+      }
+
+      li:hover {
+        a {
+          color: #0169a6;
+        }
+      }
+
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}

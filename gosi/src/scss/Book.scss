@@ -1,0 +1,241 @@
+// book
+
+.book_inner {
+  width: 1080px;
+  margin: auto;
+}
+.book_top {
+  width: 100%;
+  background: linear-gradient(90deg, #6e88ff, #846fff);
+  overflow: hidden;
+}
+
+.book_top_area {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  .left_area {
+    width: 736px;
+  }
+}
+
+.book_title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.book_icon {
+  display: inline-block;
+  background: url("https://egosi.hackers.com/images/sub/book/book_icons.png");
+  &.book_icon01 {
+    width: 29px;
+    height: 25px;
+    background-position: 0 0;
+    margin-right: 5px;
+  }
+  &.book_icon02 {
+    width: 18px;
+    height: 18px;
+    background-position: -85px 0;
+    margin-right: 2px;
+  }
+  &.book_icon03 {
+    width: 36px;
+    height: 43px;
+    background-position: -39px 0;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    line-height: 37px;
+    font-style: normal;
+    vertical-align: top;
+  }
+}
+
+// slick
+.left_area {
+  .slick-slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .slick-slide {
+    background: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 30px 70px;
+  }
+}
+
+.right_area {
+  width: 315px;
+  .slick-slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .best_book_slide {
+    height: 310px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+
+    .best_book_area {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 5px 0;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .best_book {
+      width: 75px;
+      height: auto;
+      margin-left: 20px;
+      display: inline-block;
+    }
+
+    .txt_box {
+      display: inline-block;
+      width: 100px;
+      margin-left: 20px;
+      vertical-align: top;
+
+      p {
+        font-size: 16px;
+        color: #1a1a1a;
+        font-weight: 600;
+        margin-bottom: 8px;
+        span {
+          color: #ff007e;
+        }
+      }
+
+      em {
+        font-size: 14px;
+        color: #1a1a1a;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100px;
+        white-space: normal;
+        line-height: 1.2;
+        height: 3.5em;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .lank_num {
+      vertical-align: middle;
+      margin-right: 15px;
+      display: inline-block;
+      width: 35px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 15px;
+      background: #373737;
+      color: #fff;
+      font-size: 13px;
+      text-align: center;
+    }
+    .best_landing {
+      vertical-align: middle;
+      width: 225px;
+      font-size: 14px;
+      color: #1a1a1a;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      display: inline-block;
+    }
+  }
+}
+
+.slick-dots {
+  width: auto;
+  text-align: center;
+  li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 15px;
+    background: #fff;
+    font-size: 0;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &.slick-active {
+      width: 45px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.slide_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide_txt_area {
+  width: 360px;
+  .txt_title {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .txt_info {
+    font-size: 14px;
+    color: #939393;
+    padding: 0;
+  }
+  .txt_intro {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin: 10px 0;
+  }
+  .price_info {
+    .p_txt01 {
+      font-size: 16px;
+      color: #7c7c7c;
+      margin-right: 5px;
+    }
+    .p_txt02 {
+      font-size: 16px;
+      color: #1da5fd;
+    }
+    .p_txt03 {
+      font-size: 16px;
+      color: #ff0000;
+      font-weight: 600;
+      margin: 0 10px 0 15px;
+    }
+    .p_txt04 {
+      font-size: 16px;
+      color: #868686;
+    }
+  }
+  button {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #006ca5;
+    color: #fff;
+    font-size: 16px;
+  }
+}
