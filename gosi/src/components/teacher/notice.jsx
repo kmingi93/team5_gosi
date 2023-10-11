@@ -1,5 +1,19 @@
 import React from "react";
+import Slider, { LazyLoadTypes } from "react-slick";
+
 export default function Notice() {
+  const settings = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    lazyLoad: "ondemand",
+    speed: 500,
+    slidesToShow: 1,
+    autoplay: true,
+    initialSlide: 0,
+    vertical: false,
+  };
+
   return (
     <>
       <div className="teacher_notice">
@@ -11,13 +25,23 @@ export default function Notice() {
             />
             공지사항
           </p>
-          <ul className="bxslider">
-            <li>⋅ 환승&재도전 시 해커스패스 최대 30만원 할인!</li>
-            <li>⋅ 공무원 쌩기초 교재+강의 10종 무료받기!</li>
-            <li>⋅ 공무원 면접1위! 피티윤 면접반 오픈</li>
-            <li>⋅ 공무원 합격수기만 남겨도 백화점 상품권 무료!</li>
-            <li>⋅ 환승&재도전 시 해커스패스 최대 30만원 할인!</li>
-          </ul>
+          <Slider {...settings}>
+            <div className="notice_list">
+              ⋅ 환승&재도전 시 해커스패스 최대 30만원 할인!
+            </div>
+            <div className="notice_list">
+              ⋅ 공무원 쌩기초 교재+강의 10종 무료받기!
+            </div>
+            <div className="notice_list">
+              ⋅ 공무원 면접1위! 피티윤 면접반 오픈
+            </div>
+            <div className="notice_list">
+              ⋅ 공무원 합격수기만 남겨도 백화점 상품권 무료!
+            </div>
+            <div className="notice_list">
+              ⋅ 환승&재도전 시 해커스패스 최대 30만원 할인!
+            </div>
+          </Slider>
         </div>
       </div>
     </>

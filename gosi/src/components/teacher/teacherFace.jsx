@@ -10,6 +10,7 @@ export default function TeacherFace() {
             <li className="teacher_box">
               <Link
                 to={"https://gosi.hackers.com/html/professor/?user_num=73#/"}
+                target="blank"
               >
                 <p className="teacher_info_text">
                   <span className="teacher_name_code">신민숙 선생님</span>
@@ -27,20 +28,10 @@ export default function TeacherFace() {
                 <div className="teacher_info">
                   <ul className="tch_info_btns ov">
                     <li>
-                      <a
-                        href="javascript:void(0);"
-                        onclick="tc_movie('https://cdndown.hackers.com/pass/no/mp4/promotion/230621/2024_sms_youtube.mp4', 750, 450)"
-                      >
-                        OT
-                      </a>
+                      <Link to={"javascript:void(0)"}>OT</Link>
                     </li>
                     <li>
-                      <a
-                        href="javascript:void(0);"
-                        onclick="tc_movie('https://youtu.be/O4druyNe6Io', 750, 450)"
-                      >
-                        대표 강의
-                      </a>
+                      <Link to={"javascript:void(0)"}>대표 강의</Link>
                     </li>
                     <li>
                       <Link
@@ -66,43 +57,34 @@ export default function TeacherFace() {
             </li>
             <li className="teacher_box">
               <Link
-                to={"https://gosi.hackers.com/html/professor/?user_num=73#/"}
+                to={"https://gosi.hackers.com/html/professor/?user_num=112"}
+                target="blank"
               >
                 <p className="teacher_info_text">
-                  <span className="teacher_name_code">신민숙 선생님</span>
+                  <span className="teacher_name_code">양효주 선생님</span>
                   <span className="teacher_slogan">
-                    쌩기초 입문생도
+                    공무원 국어에
                     <br />
-                    국어가 쉽게 느껴지는
+                    딱 맞는 강의
                     <br />
-                    쉬운국어, 신민숙
+                    효주 국어
                   </span>
                 </p>
                 <span className="teacher_face_img">
-                  <img src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/user_num73_img_200615103916.png" />
+                  <img src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/user_num112_img_200610085044.png" />
                 </span>
                 <div className="teacher_info">
                   <ul className="tch_info_btns ov">
                     <li>
-                      <a
-                        href="javascript:void(0);"
-                        onclick="tc_movie('https://cdndown.hackers.com/pass/no/mp4/promotion/230621/2024_sms_youtube.mp4', 750, 450)"
-                      >
-                        OT
-                      </a>
+                      <Link to={"javascript:void(0)"}>OT</Link>
                     </li>
                     <li>
-                      <a
-                        href="javascript:void(0);"
-                        onclick="tc_movie('https://youtu.be/O4druyNe6Io', 750, 450)"
-                      >
-                        대표 강의
-                      </a>
+                      <Link to={"javascript:void(0)"}>대표 강의</Link>
                     </li>
                     <li>
                       <Link
                         to={
-                          "https://gosi.hackers.com/html/professor/?user_num=73#/notice"
+                          "https://gosi.hackers.com/html/professor/?user_num=112#/notice"
                         }
                       >
                         공지사항
@@ -111,7 +93,7 @@ export default function TeacherFace() {
                     <li>
                       <Link
                         to={
-                          "https://gosi.hackers.com/html/professor/?user_num=73#/freelecture"
+                          "https://gosi.hackers.com/html/professor/?user_num=112#/freelecture"
                         }
                       >
                         무료강의

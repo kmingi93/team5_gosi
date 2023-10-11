@@ -56,18 +56,43 @@
         font-size: 15px;
         color: #fff;
       }
-      ul {
-        li {
+      //슬라이드
+      .slick-slider {
+        height: 125px;
+        .slick-list {
+          .notice_list {
+            display: inline-block;
+            width: 250px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+            overflow: hidden;
+            font-size: 13px;
+            color: #fff;
+            line-height: 23px;
+            cursor: pointer;
+          }
+        }
+        .slick-arrow {
+          position: absolute;
+          top: -48px;
           display: inline-block;
-          width: 250px;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          word-wrap: normal;
-          overflow: hidden;
-          font-size: 13px;
-          color: #fff;
-          line-height: 23px;
-          cursor: pointer;
+          width: 25px;
+          height: 25px;
+          background: url(https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/notice_btn1.png)
+            0 0 no-repeat;
+          font-size: 0;
+          text-indent: -9999px;
+          outline: 0;
+          z-index: 10;
+        }
+        .slick-prev {
+          left: 195px;
+          margin-right: 4px;
+        }
+        .slick-next {
+          right: 0;
+          background-position: -25px 0;
         }
       }
     }
