@@ -1,5 +1,5 @@
 import React from "react";
-import Slider, { LazyLoadTypes } from "react-slick";
+import Slider from "react-slick";
 
 export default function Notice() {
   const settings = {
