@@ -8,10 +8,10 @@ export default function Notice() {
     infinite: true,
     lazyLoad: "ondemand",
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 5,
     autoplay: true,
     initialSlide: 0,
-    vertical: false,
+    vertical: true,
   };
 
   return (
@@ -37,6 +37,9 @@ export default function Notice() {
             </div>
             <div className="notice_list">
               ⋅ 공무원 합격수기만 남겨도 백화점 상품권 무료!
+            </div>
+            <div className="notice_list">
+              ⋅ 환승&재도전 시 해커스패스 최대 30만원 할인!
             </div>
             <div className="notice_list">
               ⋅ 환승&재도전 시 해커스패스 최대 30만원 할인!

@@ -5,6 +5,8 @@
   background: #fff;
   letter-spacing: -1px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 .lnb_wrap {
@@ -80,6 +82,100 @@
 
       a {
         font-size: 13px;
+      }
+    }
+  }
+}
+
+.lecture_cont {
+  width: 865px;
+
+  .title_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+
+    .title {
+      font-size: 22px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+
+    .lecture_nav {
+      font-size: 14px;
+      color: #808080;
+      em {
+        color: #0169a6;
+      }
+    }
+  }
+
+  .search_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 20px;
+    }
+    .title::before {
+      display: inline-block;
+      vertical-align: baseline;
+      width: 19px;
+      height: 19px;
+      margin: 0 5px 0 0;
+      content: "";
+      background: url(//egosi.hackers.com/images/lecture/icon_search.png) 0 0
+        no-repeat;
+    }
+    .search_box {
+      .guide_btn {
+        width: 135px;
+        background: #49aed6;
+        border-radius: 18px;
+        margin: 0 10px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        color: #fff;
+      }
+      .lecture_search {
+        width: 220px;
+        height: 35px;
+        padding: 0 10px;
+        line-height: 35px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #999999;
+      }
+      .search_btn {
+        width: 80px;
+        height: 35px;
+        margin-left: 10px;
+        line-height: 35px;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        background: #0169a6;
+        .icon_q_mark {
+          vertical-align: middle;
+          margin: 0 0 3px 5px;
+        }
+      }
+      .reset_btn {
+        border: 1px solid #0169a6;
+        box-sizing: border-box;
+        background: #fff;
+        color: #0169a6;
+        width: 80px;
+        height: 35px;
+        margin-left: 10px;
+        line-height: 35px;
+        font-size: 16px;
       }
     }
   }

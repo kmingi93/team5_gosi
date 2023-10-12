@@ -59,6 +59,9 @@
       //슬라이드
       .slick-slider {
         height: 125px;
+        .slick-slide {
+          height: 28px;
+        }
         .slick-list {
           .notice_list {
             display: inline-block;
