@@ -1,4 +1,11 @@
 export default function LectureTap() {
+  function WindowOpen() {
+    window.open(
+      "./guidePopup",
+      "_blank",
+      "width=750,height=860,scrollbars=yes,resizable=yes"
+    );
+  }
   return (
     <div className="lecture_cont">
       <div className="title_section">
@@ -11,7 +18,7 @@ export default function LectureTap() {
         <div className="search_section">
           <p className="title">강좌 찾아보기</p>
           <div className="search_box">
-            <button type="button" className="guide_btn">
+            <button type="button" className="guide_btn" onClick={WindowOpen}>
               수강신청가이드
             </button>
             <input

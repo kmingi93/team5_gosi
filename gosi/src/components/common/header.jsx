@@ -1,8 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Teacher from "pages/teacher";
-import Book from "pages/book";
-import Exam from "pages/exam";
-import Enrolment from "pages/enrolment";
+import { Link } from "react-router-dom";
 import "scss/Header.scss";
 import { useState } from "react";
 import headerData from "mocks/headerData.json";
@@ -71,12 +67,6 @@ function Header() {
           </ul>
         </div>
       </div>
-      <Routes>
-        <Route path="/enrolment" element={<Enrolment />}></Route>
-        <Route path="/teacher" element={<Teacher />}></Route>
-        <Route path="/book" element={<Book />}></Route>
-        <Route path="/exam" element={<Exam />}></Route>
-      </Routes>
     </>
   );
 }
