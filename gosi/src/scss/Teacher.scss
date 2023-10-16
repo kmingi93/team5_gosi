@@ -193,9 +193,9 @@
         color: #0169a6;
       }
     }
-    .teacher_tab_area {
+    .teacherTab {
       width: 100%;
-      .tab {
+      .teacherNav {
         height: 70px;
         margin: 24px auto 15px;
         width: 100%;
@@ -204,7 +204,7 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-        li {
+        .nav-item {
           width: 100%;
           height: 70px;
           border-right: 1px solid #f4f4f4;
@@ -213,18 +213,18 @@
           box-sizing: border-box;
           background: #fff;
           text-align: center;
-          button {
-            display: block;
+          .nav-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 100%;
             cursor: pointer;
             font-size: 14px;
             color: #777;
           }
-        }
-        li.on {
-          background: #0069a6;
-          button {
+          .nav-link.active {
+            background: #0069a6;
             color: #fff;
           }
         }
@@ -364,10 +364,13 @@
           content: "|";
           margin: 0 20px;
         }
-        .tc_notice_slider {
-          height: 23px;
-          ul {
-            li {
+        //슬라이드
+        .slick-slider {
+          .slick-slide {
+            height: 23px;
+          }
+          .slick-list {
+            .tc_notice_list {
               display: inline-block;
               width: 640px;
               text-overflow: ellipsis;
@@ -384,6 +387,27 @@
                 margin-left: 5px;
               }
             }
+          }
+          .slick-arrow {
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            width: 23px;
+            height: 23px;
+            background: url(https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/notice_btn2.png)
+              0 0 no-repeat;
+            font-size: 0;
+            text-indent: -9999px;
+            outline: 0;
+            z-index: 10;
+          }
+          .slick-prev {
+            right: 23px;
+            margin-right: 4px;
+          }
+          .slick-next {
+            right: 0;
+            background-position: -23px 0;
           }
         }
       }

@@ -103,6 +103,102 @@ export default function TeacherFace() {
                 </div>
               </Link>
             </li>
+            <li className="teacher_box">
+              <Link
+                to={"https://gosi.hackers.com/html/professor/?user_num=485#/"}
+                target="blank"
+              >
+                <p className="teacher_info_text">
+                  <span className="teacher_name_code">황진선 선생님</span>
+                  <span className="teacher_slogan">
+                    암기가 필요없는
+                    <br />
+                    이해 중심 수업!
+                    <br />
+                    이해 국어, 황진선
+                  </span>
+                </p>
+                <span className="teacher_face_img">
+                  <img src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/user_num485_img_220905141240.png" />
+                </span>
+                <div className="teacher_info">
+                  <ul className="tch_info_btns ov">
+                    <li>
+                      <Link to={"javascript:void(0)"}>OT</Link>
+                    </li>
+                    <li>
+                      <Link to={"javascript:void(0)"}>대표 강의</Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={
+                          "https://gosi.hackers.com/html/professor/?user_num=485#/notice"
+                        }
+                      >
+                        공지사항
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={
+                          "https://gosi.hackers.com/html/professor/?user_num=485#/freelecture"
+                        }
+                      >
+                        무료강의
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </Link>
+            </li>
+            <li className="teacher_box">
+              <Link
+                to={"https://gosi.hackers.com/html/professor/?user_num=340/"}
+                target="blank"
+              >
+                <p className="teacher_info_text">
+                  <span className="teacher_name_code">최정 선생님</span>
+                  <span className="teacher_slogan">
+                    빠른 합격의 비결
+                    <br />
+                    공무원국어
+                    <br />
+                    출제공식 마스터
+                  </span>
+                </p>
+                <span className="teacher_face_img">
+                  <img src="https://cdn.hackers.com/gosi/images/teacher_info/teacher_mg/teacher_gate/user_num340_img_200708160432.png" />
+                </span>
+                <div className="teacher_info">
+                  <ul className="tch_info_btns ov">
+                    <li>
+                      <Link to={"javascript:void(0)"}>OT</Link>
+                    </li>
+                    <li>
+                      <Link to={"javascript:void(0)"}>대표 강의</Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={
+                          "https://gosi.hackers.com/html/professor/?user_num=340#/notice"
+                        }
+                      >
+                        공지사항
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={
+                          "https://gosi.hackers.com/html/professor/?user_num=340#/freelecture"
+                        }
+                      >
+                        무료강의
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
