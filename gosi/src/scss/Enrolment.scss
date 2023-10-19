@@ -9,6 +9,7 @@
   justify-content: space-between;
 }
 
+// lnb
 .lnb_wrap {
   width: 153px;
 
@@ -19,6 +20,11 @@
     padding-bottom: 7px;
     margin-bottom: 20px;
     border-bottom: 3px solid #000;
+  }
+  .lec_menu {
+    a:hover {
+      color: #0169a6;
+    }
   }
 
   .lec_menu dt {
@@ -73,13 +79,6 @@
         content: "-";
         padding-right: 2px;
       }
-
-      li:hover {
-        a {
-          color: #0169a6;
-        }
-      }
-
       a {
         font-size: 13px;
       }
@@ -87,6 +86,7 @@
   }
 }
 
+// 강의 리스트 컨텐츠
 .lecture_cont {
   width: 865px;
 
@@ -113,6 +113,7 @@
     }
   }
 
+  // 강좌 찾아보기
   .search_section {
     display: flex;
     align-items: center;
@@ -197,6 +198,74 @@
         line-height: 35px;
         font-size: 16px;
       }
+    }
+  }
+}
+
+//강의 리스트 탭
+.lecture_section {
+  table {
+    width: 100%;
+    margin-top: 10px;
+    border-top: 2px solid #ccc;
+    th {
+      width: 170px;
+      padding: 0 0 0 30px;
+      background: #f7f7f7;
+      font-size: 16px;
+      color: #333333;
+      text-align: left;
+      border-bottom: 1px solid #e6e6e6;
+      font-weight: normal;
+      span {
+        display: inline-block;
+        width: 60px;
+        text-align: right;
+        font-size: 14px;
+        color: #999999;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+    td {
+      width: 685px;
+      padding-left: 20px;
+      color: #808080;
+      border-bottom: 1px solid #e6e6e6;
+    }
+    .tab_list {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+      height: 60px;
+      li {
+        position: relative;
+        margin-right: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        color: #808080;
+        cursor: pointer;
+      }
+      li.on {
+        color: #0169a6;
+        font-weight: bold;
+      }
+      li::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10px;
+        width: 1px;
+        height: 16px;
+        background: #b8b8b8;
+      }
+    }
+    .tab_list.on {
+      height: auto;
     }
   }
 }

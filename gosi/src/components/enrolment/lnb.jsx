@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Lnb() {
   const [lnbCount, SetLnbCount] = useState("on");
+  const [lnbCount02, SetLnbCount02] = useState("on");
   function lnb_togle(params) {
     if (lnbCount === "on") {
       SetLnbCount("off");
@@ -10,16 +11,24 @@ export default function Lnb() {
       SetLnbCount("on");
     }
   }
+  function lnb_togle02(params) {
+    if (lnbCount02 === "on") {
+      SetLnbCount02("off");
+    } else {
+      SetLnbCount02("on");
+    }
+  }
   return (
     <div className="lnb_wrap">
       <p className="lnb_title">수강신청</p>
+      {/* 패스상품 수강신청 */}
       <div className="lec_menu">
         <dl>
           <dt onClick={lnb_togle}>
             패스상품 수강신청 <span> {lnbCount === "on" ? "▲" : "▼"}</span>
           </dt>
           <dd className={`${lnbCount}`}>
-            <p>• 전강좌 무제한 패스</p>
+            <p className="lec_title">• 전강좌 무제한 패스</p>
             <ul className="lec_list">
               <li>
                 <Link
@@ -68,7 +77,7 @@ export default function Lnb() {
             </ul>
           </dd>
           <dd className={`${lnbCount}`}>
-            <p>• 직렬별 패스</p>
+            <p className="lec_title">• 직렬별 패스</p>
             <ul className="lec_list">
               <li>
                 <Link
@@ -257,6 +266,46 @@ export default function Lnb() {
                 </Link>
               </li>
             </ul>
+          </dd>
+        </dl>
+      </div>
+      {/* 단과 수강신청 */}
+      <div className="lec_menu v2">
+        <dl>
+          <dt onClick={lnb_togle02}>
+            단과 수강신청 <span> {lnbCount02 === "on" ? "▲" : "▼"}</span>
+          </dt>
+          <dd className={`${lnbCount02}`}>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•9급 인강</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•8급 인강</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•7급 인강</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•5급 인강</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•면접</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•사무관 승진</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•영어 기초 강좌</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•토익/지텔프 강좌</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•제 2외국어 강좌</Link>
+            </p>
+            <p className="lec_title">
+              <Link to={"/enrolment"}>•가산점 자격증 강좌</Link>
+            </p>
           </dd>
         </dl>
       </div>
