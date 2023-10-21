@@ -51,6 +51,22 @@
     font-style: normal;
     vertical-align: top;
   }
+  &.book_icon04 {
+    width: 17px;
+    height: 14px;
+    background-position: -113px 0;
+  }
+  &.book_icon05 {
+    width: 16px;
+    height: 12px;
+    background-position: -138px -22px;
+  }
+  &.book_icon06 {
+    width: 51px;
+    height: 29px;
+    background-position: -60px -53px;
+    border-radius: 10px;
+  }
 }
 
 // slick
@@ -237,5 +253,195 @@
     background-color: #006ca5;
     color: #fff;
     font-size: 16px;
+  }
+}
+
+// book list
+.book_fliter_area {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 0;
+
+  .select_area {
+    select {
+      display: inline-block;
+      width: 130px;
+      height: 40px;
+      margin-right: 10px;
+      border: 1px solid #b7b7b7;
+      text-indent: 10px;
+      font-size: 16px;
+      color: #666;
+    }
+  }
+
+  .search_area {
+    input {
+      width: 250px;
+      height: 40px;
+      padding: 0 15px;
+      border: 1px solid #b7b7b7;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    button {
+      width: 90px;
+      height: 40px;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      background: #3c3c3c;
+    }
+  }
+}
+
+.book_list {
+  padding-bottom: 300px;
+
+  .list_top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #707070;
+
+    p {
+      font-size: 20px;
+      color: #282828;
+      font-weight: 600;
+
+      span {
+        color: #ff0000;
+        font-weight: 600;
+      }
+    }
+
+    .view_select_area {
+      button {
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 15px;
+        &.active {
+          color: #6173ff;
+          .book_icon04 {
+            background-position: -113px -22px;
+          }
+          .book_icon05 {
+            background-position: -138px 0;
+          }
+        }
+        i {
+          margin-right: 5px;
+        }
+      }
+
+      select {
+        padding-left: 12px;
+        margin-left: 15px;
+        width: 110px;
+        height: 30px;
+        font-size: 16px;
+        text-align: left;
+        color: #666;
+        letter-spacing: -1px;
+        border: 1px solid #b7b7b7;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+// 간략히 보기
+.briefly_view {
+  display: flex;
+  justify-content: start;
+  padding: 30px 0;
+
+  li {
+    position: relative;
+    width: 20%;
+    padding: 20px;
+    input[type="checkbox"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #a9a9a9;
+      cursor: pointer;
+      &:disabled {
+        border: none;
+      }
+    }
+    img {
+      display: block;
+      width: 70%;
+    }
+    .tit_kind {
+      font-size: 12px;
+      color: #f14808;
+      margin: 10px 0 5px;
+    }
+    .title {
+      width: 100%;
+      font-size: 16px;
+      color: #1a1a1a;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      line-height: 1.2;
+      text-align: left;
+      word-wrap: break-word;
+    }
+    .info_name {
+      font-size: 12px;
+      color: #7c7c7c;
+      margin: 5px 0 10px;
+    }
+    .before_price {
+      height: 24px;
+      span {
+        font-size: 14px;
+        color: #7c7c7c;
+        text-decoration: line-through;
+        margin-right: 5px;
+      }
+      em {
+        font-size: 14px;
+        color: #f65819;
+        font-weight: 600;
+      }
+    }
+    .after_price {
+      font-size: 19px;
+      color: #1a1a1a;
+      font-weight: 600;
+      span {
+        margin-left: 5px;
+        font-size: 14px;
+        color: #7c7c7c;
+        font-weight: normal;
+      }
+    }
+    .bookstore {
+      width: 137px;
+      height: 29px;
+      margin-top: 10px;
+      text-align: center;
+      letter-spacing: -1px;
+      border: 1px solid #6173ff;
+      box-sizing: border-box;
+      border-radius: 30px;
+      font-size: 13px;
+      color: #444;
+      &.buy_now {
+        display: flex;
+        justify-content: space-between;
+        span {
+          width: 85px;
+          line-height: 29px;
+        }
+      }
+    }
   }
 }
