@@ -1,8 +1,22 @@
 import TopBanner from "components/book/topBanner";
-import React from "react";
+import { useState } from "react";
 import "scss/Book.scss";
+import bookData from "mocks/book.json";
 
 export default function Index() {
+  const [view, setView] = useState("simple");
+
+  // 콤마
+  const addComma = (price) => {
+    let returnString = price?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return returnString;
+  };
+
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1;
+  const day = today.getDate();
+
   return (
     <>
       <TopBanner />
@@ -31,13 +45,28 @@ export default function Index() {
         <div className="book_list">
           <div className="list_top">
             <p>
-              총 <span>0000</span>권의 교재가 있습니다.
+              총{" "}
+              <span>
+                {
+                  bookData.filter((book) => book.bookCategory === "basic")
+                    .length
+                }
+              </span>
+              권의 교재가 있습니다.
             </p>
             <div className="view_select_area">
-              <button type="button" className="briefly_view active">
+              <button
+                type="button"
+                className={`${view === "simple" ? "active" : ""}`}
+                onClick={() => setView("simple")}
+              >
                 <i className="book_icon book_icon04"></i>간략히보기
               </button>
-              <button type="button" className="expand_view">
+              <button
+                type="button"
+                className={`${view === "expand" ? "active" : ""}`}
+                onClick={() => setView("expand")}
+              >
                 <i className="book_icon book_icon05"></i>펼쳐보기
               </button>
               <select name="viewNum" id="viewSelect">
@@ -49,58 +78,118 @@ export default function Index() {
             </div>
           </div>
 
-          <ul className="briefly_view">
-            <li>
-              <input type="checkbox" disabled />
-              <button type="button">
-                <img
-                  src="https://cdn.hackers.com/egosi/zfiles/book_img/_img_20231013145422.jpg"
-                  alt="행정법총론"
-                />
-              </button>
-              <p className="tit_kind">행정법</p>
-              <button type="button" className="title">
-                2024 해커스공무원 神행정법총론 핵심 기출 OX
-              </button>
-              <p className="info_name">
-                해커스 공무원연구소<span>&#124;</span>해커스공무원
-              </p>
-              <p className="before_price">
-                <span>36000</span>
-                <em>&#91;10% &#8595;&#93;</em>
-              </p>
-              <p className="after_price">
-                32,400원 <span>324P 적립</span>
-              </p>
-              <button type="button" className="bookstore">
-                서점별도구매
-              </button>
-            </li>
+          <ul
+            className={`${view === "simple" ? "simple_view" : "expand_view"}`}
+          >
+            {bookData
+              .filter((book) => book.bookCategory === "basic")
+              ?.map((book) => (
+                <li key={book.index}>
+                  {book.store ? (
+                    <input type="checkbox" />
+                  ) : (
+                    <input type="checkbox" disabled />
+                  )}
 
-            <li>
-              <input type="checkbox" />
-              <button type="button">
-                <img
-                  src="https://cdn.hackers.com/egosi/zfiles/book_img/3958_img_20231005142708.png"
-                  alt="행정법총론"
-                />
-              </button>
-              <p className="tit_kind">영어</p>
-              <button type="button" className="title">
-                해커스공무원 영어 하프모의고사 10월
-              </button>
-              <p className="info_name">
-                해커스 공무원연구소<span>&#124;</span>해커스공무원
-              </p>
-              <p className="before_price"></p>
-              <p className="after_price">
-                6,000원 <span>60P 적립</span>
-              </p>
-              <button type="button" className="bookstore buy_now">
-                <i className="book_icon book_icon06"></i>
-                <span>바로구매</span>
-              </button>
-            </li>
+                  <button type="button" className="book_img_btn">
+                    <img src={book.bookImage} alt={book.bookTitle} />
+                  </button>
+
+                  <div className="book_info_area">
+                    <p className="tit_kind">{book.bookSubject}</p>
+                    <button type="button">
+                      <p className="title">{book.bookTitle}</p>
+                    </button>
+                    {/* 일부 펼쳐볼 경우만 노출 */}
+                    <p className="info_name">
+                      {book.bookInfo}{" "}
+                      {view === "expand" && `| 출간일 ${book.bookInfoDate}`}
+                    </p>
+
+                    {view === "expand" && (
+                      <>
+                        <p
+                          className="book_detail"
+                          dangerouslySetInnerHTML={{ __html: book.bookDetail }}
+                        ></p>
+
+                        <p className="book_delivery">
+                          <span>
+                            [출고 예정일] {year}-{month}-{day + 1}
+                          </span>{" "}
+                          | 출고일로부터{" "}
+                          {`${book.bookDelivery - 2}~${book.bookDelivery}`}일
+                          이내 수령 가능
+                        </p>
+                      </>
+                    )}
+                  </div>
+
+                  <div className="price_area">
+                    {book.bookDiscount !== "" && (
+                      <p className="before_price">
+                        <span>{`${addComma(book.bookPrice)}`}</span>
+                        <em>&#91;{book.bookDiscount}% &#8595;&#93;</em>
+                      </p>
+                    )}
+                    <p className="after_price">
+                      {addComma(
+                        book.bookPrice * ((100 - book.bookDiscount) / 100)
+                      )}
+                      원{" "}
+                      <span>
+                        {Math.round(
+                          (book.bookPrice * ((100 - book.bookDiscount) / 100)) /
+                            100
+                        )}
+                        P 적립
+                      </span>
+                    </p>
+
+                    {view === "simple" ? (
+                      // 간단히 보기
+                      <>
+                        {book.store ? (
+                          <button type="button" className="bookstore buy_now">
+                            <i></i>
+                            <span>바로구매</span>
+                          </button>
+                        ) : (
+                          <button type="button" className="bookstore">
+                            서점별도구매
+                          </button>
+                        )}
+                      </>
+                    ) : (
+                      // 펼쳐보기
+                      <>
+                        {book.store ? (
+                          <>
+                            <span className="book_mark reserve_icon">
+                              예약판매중
+                            </span>
+                            <button type="button" className="bookstore">
+                              바로구매
+                            </button>
+                            <button className="bookstore cart_btn">
+                              장바구니
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            <span className="book_mark sold_icon">
+                              서점별도구매
+                            </span>
+                            <button type="button" className="bookstore">
+                              바로구매
+                            </button>
+                          </>
+                        )}
+                      </>
+                    )}
+                  </div>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

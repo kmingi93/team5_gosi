@@ -1,4 +1,17 @@
 // book
+@mixin ellipsis($line: 1) {
+  @if ($line == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
 
 .book_inner {
   width: 1080px;
@@ -352,9 +365,10 @@
 }
 
 // 간략히 보기
-.briefly_view {
+.simple_view {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   padding: 30px 0;
 
   li {
@@ -373,74 +387,210 @@
         border: none;
       }
     }
+  }
+  .book_img_btn {
+    display: block;
+    width: 100%;
     img {
       display: block;
-      width: 70%;
+      width: auto;
+      max-width: 70%;
+      height: auto;
+      max-height: 155px;
     }
+  }
+  .tit_kind {
+    font-size: 12px;
+    color: #f14808;
+    margin: 10px 0 5px;
+  }
+  .title {
+    width: 100%;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-align: left;
+    @include ellipsis(2);
+  }
+  .info_name {
+    font-size: 12px;
+    color: #7c7c7c;
+    margin: 5px 0 10px;
+  }
+  .before_price {
+    height: 24px;
+    span {
+      font-size: 14px;
+      color: #7c7c7c;
+      text-decoration: line-through;
+      margin-right: 5px;
+    }
+    em {
+      font-size: 14px;
+      color: #f65819;
+      font-weight: 600;
+    }
+  }
+  .after_price {
+    font-size: 19px;
+    color: #1a1a1a;
+    font-weight: 600;
+    span {
+      margin-left: 5px;
+      font-size: 14px;
+      color: #7c7c7c;
+      font-weight: normal;
+    }
+  }
+  .bookstore {
+    width: 137px;
+    height: 29px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: -1px;
+    border: 1px solid #6173ff;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #444;
+    &.buy_now {
+      display: flex;
+      justify-content: space-between;
+      i {
+        display: inline-block;
+        width: 51px;
+        height: 30px;
+        background-image: url("https://egosi.hackers.com/images/sub/book/book_icons.png");
+        background-position: -60px -53px;
+        vertical-align: middle;
+      }
+      span {
+        width: 85px;
+        line-height: 29px;
+      }
+    }
+  }
+}
+
+// 펼쳐보기
+.expand_view {
+  width: 100%;
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 30px;
+
+    input {
+      width: 20px;
+      height: 20px;
+      // border: 1px solid #ccc;
+      vertical-align: middle;
+      appearance: auto;
+      &:disabled {
+        border: none;
+        opacity: 0;
+      }
+    }
+  }
+
+  .book_img_btn {
+    width: auto;
+    max-width: 165px;
+    img {
+      width: auto;
+      max-width: 165px;
+      height: auto;
+      max-height: 200px;
+    }
+  }
+
+  .book_info_area {
+    width: 550px;
+
     .tit_kind {
-      font-size: 12px;
-      color: #f14808;
-      margin: 10px 0 5px;
+      font-size: 14px;
+      color: #2e43e5;
+      margin-bottom: 5px;
     }
-    .title {
-      width: 100%;
-      font-size: 16px;
+    .bookTitle {
       color: #1a1a1a;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-      line-height: 1.2;
-      text-align: left;
-      word-wrap: break-word;
+      @include ellipsis(1);
     }
     .info_name {
-      font-size: 12px;
       color: #7c7c7c;
-      margin: 5px 0 10px;
+      font-size: 14px;
     }
-    .before_price {
-      height: 24px;
+
+    .book_detail {
+      margin: 15px 0;
+    }
+    .book_delivery {
+      font-size: 14px;
+      color: #939393;
       span {
-        font-size: 14px;
+        color: #2e43e5;
+      }
+    }
+  }
+
+  .price_area {
+    width: 160px;
+    text-align: center;
+
+    .before_price {
+      font-size: 14px;
+      color: #2e43e5;
+      font-weight: 600;
+      span {
         color: #7c7c7c;
         text-decoration: line-through;
-        margin-right: 5px;
-      }
-      em {
-        font-size: 14px;
-        color: #f65819;
-        font-weight: 600;
+        font-weight: 400;
+        margin-right: 10px;
       }
     }
+
     .after_price {
       font-size: 19px;
       color: #1a1a1a;
       font-weight: 600;
+      margin-bottom: 15px;
       span {
-        margin-left: 5px;
         font-size: 14px;
         color: #7c7c7c;
-        font-weight: normal;
+        font-weight: 400;
       }
     }
+
+    .book_mark {
+      display: inline-block;
+      margin: auto;
+      font-size: 12px;
+      padding: 2px 10px;
+      color: #fff;
+      &.reserve_icon {
+        background-color: darkblue;
+      }
+      &.sold_icon {
+        background-color: #d51e1f;
+      }
+    }
+
     .bookstore {
-      width: 137px;
-      height: 29px;
-      margin-top: 10px;
-      text-align: center;
-      letter-spacing: -1px;
+      display: block;
+      width: 160px;
+      height: 40px;
+      margin: 20px auto 5px;
+      color: #fff;
+      background: #6173ff;
       border: 1px solid #6173ff;
-      box-sizing: border-box;
-      border-radius: 30px;
-      font-size: 13px;
-      color: #444;
-      &.buy_now {
-        display: flex;
-        justify-content: space-between;
-        span {
-          width: 85px;
-          line-height: 29px;
-        }
+      font-size: 16px;
+
+      &.cart_btn {
+        margin: 5px auto;
+        color: #6173ff;
+        background: #fff;
+        border: 1px solid #6173ff;
       }
     }
   }

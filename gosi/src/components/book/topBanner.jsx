@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import bookData from "mocks/book.json";
 
-export default function TopBanner(){
+export default function TopBanner() {
   const settings = {
     dots: true,
     arrows: false,
@@ -13,7 +13,7 @@ export default function TopBanner(){
     initialSlide: 0,
   };
 
-  return(
+  return (
     <>
       <div className="book_top">
         <div className="book_inner book_top_area">
@@ -51,21 +51,21 @@ export default function TopBanner(){
                             [{book.bookDiscount}% ↓]
                           </span>
                           <span className="p_txt03">
-                            {`${(
+                            {(
                               book.bookPrice *
                               ((100 - book.bookDiscount) / 100)
                             )
                               .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                             원
                           </span>
                           <span className="p_txt04">
                             <i className="book_icon book_icon02"></i>
-                            {`${Math.round(
+                            {Math.round(
                               (book.bookPrice *
                                 ((100 - book.bookDiscount) / 100)) /
                                 100
-                            )}`}
+                            )}
                             P 적립
                           </span>
                         </div>
@@ -172,5 +172,5 @@ export default function TopBanner(){
         </div>
       </div>
     </>
-  )
+  );
 }
