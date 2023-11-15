@@ -126,12 +126,14 @@ export default function Index() {
                   </div>
 
                   <div className="price_area">
-                    {book.bookDiscount !== "" && (
-                      <p className="before_price">
-                        <span>{`${addComma(book.bookPrice)}`}</span>
-                        <em>&#91;{book.bookDiscount}% &#8595;&#93;</em>
-                      </p>
-                    )}
+                    <p className="before_price">
+                      {book.bookDiscount !== "" && (
+                        <>
+                          <span>{`${addComma(book.bookPrice)}`}</span>
+                          <em>&#91;{book.bookDiscount}% &#8595;&#93;</em>
+                        </>
+                      )}
+                    </p>
                     <p className="after_price">
                       {addComma(
                         book.bookPrice * ((100 - book.bookDiscount) / 100)
