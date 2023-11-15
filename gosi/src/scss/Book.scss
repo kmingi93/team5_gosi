@@ -383,7 +383,9 @@
       height: 15px;
       border: 1px solid #a9a9a9;
       cursor: pointer;
+      appearance: auto;
       &:disabled {
+        display: none;
         border: none;
       }
     }
