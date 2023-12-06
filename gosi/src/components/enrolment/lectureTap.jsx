@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TeacherList from "./teacherList";
 
 export default function LectureTap() {
   const [isHovering, setIsHovering] = useState(0); //검색 툴팁
@@ -228,6 +229,15 @@ export default function LectureTap() {
           </tbody>
         </table>
       </div>
+      <div className="lecture_data">
+        <p className="lec_qty">
+          전체 강좌 개수 : <span>1,407개</span>
+        </p>
+        <p className="lec_date">
+          업데이트 : <span>2023년 12월 06일</span>
+        </p>
+      </div>
+      <TeacherList />
     </div>
   );
 }

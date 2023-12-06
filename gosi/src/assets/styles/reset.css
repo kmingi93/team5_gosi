@@ -124,7 +124,6 @@ a:hover {
 select::-ms-expand {
   display: none;
 }
-input,
 button,
 fieldset,
 textarea {
@@ -144,6 +143,7 @@ input[type="radio"],
 input[type="checkbox"] {
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 textarea::placeholder {
   opacity: 1;

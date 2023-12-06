@@ -86,7 +86,7 @@
   }
 }
 
-// 강의 리스트 컨텐츠
+// 강의 리스트 제목
 .lecture_cont {
   width: 865px;
 
@@ -110,6 +110,35 @@
       em {
         color: #0169a6;
       }
+    }
+  }
+
+  // 강의 리스트 수량
+  .lecture_data {
+    margin: 15px 0 90px;
+    display: flex;
+    align-items: center;
+    .lec_qty {
+      position: relative;
+      padding-right: 20px;
+      margin-right: 20px;
+      font-size: 16px;
+      color: #999999;
+      span {
+        color: #0169a6;
+      }
+    }
+    .lec_qty::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      width: 1px;
+      height: 60%;
+      background: #999999;
+    }
+    .lec_date {
+      color: #999999;
     }
   }
 
@@ -266,6 +295,200 @@
     }
     .tab_list.on {
       height: auto;
+    }
+  }
+}
+
+//신규 개강 강좌 체크
+.new_lec_chK {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  input {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  label {
+    cursor: pointer;
+  }
+  select {
+    width: 140px;
+    height: 35px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #999999;
+  }
+}
+
+// 선생님 배너
+.t_bnr {
+  position: relative;
+  .t_img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .t_title {
+    background: #eff8fd;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 0 20px 150px;
+    .t_info {
+      font-size: 20px;
+    }
+    .t_name {
+      font-size: 24px;
+      margin-right: 7px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .t_home_btn {
+      display: inline-block;
+      width: 60px;
+      height: 22px;
+      font-size: 12px;
+      color: #0169a6;
+      border: 1px solid #0169a6;
+      border-radius: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+}
+
+// 강의목록
+.t_lecture_wrap {
+  .t_subject {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px 0;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #ccc;
+  }
+  .lecture_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+    .mark {
+      display: inline-block;
+      font-size: 11px;
+      background-color: #808080;
+      color: #fff;
+      text-align: center;
+      height: 16px;
+      line-height: 16px;
+      margin-right: 5px;
+      padding: 0 4px;
+    }
+    .mark.new {
+      background-color: #e02d02;
+    }
+    .mark.doing {
+      background-color: #ffa200;
+    }
+    .mark.clear {
+      background-color: #808080;
+    }
+    .mark.common {
+      background-color: #b193c5;
+    }
+    .mark.free {
+      background-color: #808080;
+    }
+
+    .t_detail_link {
+      display: block;
+      width: 400px;
+      padding: 10px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 18px;
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    .commentary_area {
+      display: flex;
+      align-items: center;
+      .commentary_icon {
+        display: flex;
+        align-items: center;
+        p {
+          margin-right: 15px;
+          font-size: 16px;
+          color: #7c7c7c;
+          font-weight: 400;
+        }
+        span {
+          background: url("https://egosi.hackers.com/images/lecture/teaDetail_icon.png")
+            no-repeat top left;
+          width: 17px;
+          height: 17px;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+      .commentary_icon.period {
+        span {
+          background-position-y: -410px;
+        }
+      }
+      .commentary_icon.mobile {
+        span {
+          background-position-y: -430px;
+        }
+      }
+      .commentary_icon.pc {
+        span {
+          background-position-y: -450px;
+        }
+      }
+      .commentary_icon.interest {
+        a {
+          font-weight: bold;
+        }
+        span {
+          background-position-y: -470px;
+        }
+      }
+    }
+
+    .t_video_btn {
+      button {
+        display: block;
+        border: 1px solid #e6e6e6;
+        font-size: 14px;
+        color: #737373;
+        text-align: center;
+        width: 86px;
+        margin: 0 auto;
+        height: 28px;
+        line-height: 28px;
+        margin-bottom: 6px;
+        box-sizing: border-box;
+      }
+    }
+
+    .payment_area {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input {
+          margin-right: 5px;
+        }
+        label {
+          cursor: pointer;
+          margin-right: 20px;
+        }
+        .price {
+          font-weight: bold;
+        }
+      }
     }
   }
 }
